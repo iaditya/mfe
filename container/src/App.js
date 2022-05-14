@@ -3,7 +3,7 @@ import MarketingApp from "./remoteComponents/MarketingApp";
 
 const App = () => (
   <>
-    <div>Container TEsting</div>
+    <div>Container Testing</div>
     <hr />
     <MarketingApp />
   </>
