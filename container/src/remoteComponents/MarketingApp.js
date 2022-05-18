@@ -8,7 +8,11 @@ export default () => {
   const elem = useRef(null);
 
   useEffect(() => {
-    mount(elem.current);
+    mount(elem.current, {
+      onNavigate: () => {
+        console.log("navigation");
+      },
+    });
   }, []);
 
   return <div ref={elem}></div>;
