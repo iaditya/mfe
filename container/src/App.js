@@ -19,7 +19,10 @@ const App = () => {
     <BrowserRouter>
       <StylesProvider generateClassName={generateClassName}>
         <div>
-          <Header signedIn={isSignedIn} />
+          <Header
+            onSignOut={() => setIsSignedIn(false)}
+            signedIn={isSignedIn}
+          />
           <Suspense fallback={<Progress />}>
             <Switch>
               <Route path="/auth" component={AuthLazy}>
