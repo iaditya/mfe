@@ -3,7 +3,7 @@ import React, { useRef, useEffect } from "react";
 import { mount } from "auth/Auth";
 import { useHistory } from "react-router-dom";
 
-export default () => {
+export default ({ onSignedIn }) => {
   const elem = useRef(null);
   const history = useHistory(); //This is browser history
 
@@ -16,6 +16,9 @@ export default () => {
         if (pathname !== nextPathname) {
           history.push(nextPathname);
         }
+      },
+      onSignIn: () => {
+        onSignedIn();
       },
     });
 
