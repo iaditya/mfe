@@ -15,7 +15,6 @@ export default ({ history }) => {
 
   return (
     <div>
-      <p>Auth</p>
       <StylesProvider generateClassName={generateClassName}>
         <Router history={history}>
           <Switch>
