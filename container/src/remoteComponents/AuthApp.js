@@ -9,8 +9,9 @@ export default () => {
 
   useEffect(() => {
     const { onParentNavigate } = mount(elem.current, {
+      initialPath: history.location.pathname,
       onNavigate: ({ pathname: nextPathname }) => {
-        console.log("child navigates", nextPathname);
+        console.log("Auth App  navigates", nextPathname);
         const { pathname } = history.location;
         if (pathname !== nextPathname) {
           history.push(nextPathname);
